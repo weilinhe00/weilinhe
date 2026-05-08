@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="88f15efb-c29d-464f-8003-4745f348f2ac" name="更改" comment="" />
+    <list default="true" id="88f15efb-c29d-464f-8003-4745f348f2ac" name="更改" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,6 +77,8 @@
       <workItem from="1776742399683" duration="6946000" />
       <workItem from="1776817773149" duration="18000" />
       <workItem from="1776818090026" duration="3045000" />
+      <workItem from="1777510723938" duration="2631000" />
+      <workItem from="1777635354688" duration="8000" />
     </task>
     <servers />
   </component>
@@ -97,7 +101,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/diary.html</url>
           <line>791</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
