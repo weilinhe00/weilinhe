@@ -305,6 +305,13 @@
 
         .fun-body p .accent { color: var(--accent); font-weight: 500; }
 
+        a.inline-link {
+            color: var(--accent);
+            text-decoration: none;
+            transition: opacity 0.15s ease;
+        }
+        a.inline-link:hover { opacity: 0.7; }
+
         footer {
             margin-top: 4.5rem;
             font-size: 0.78rem;
@@ -415,7 +422,18 @@
             .nav-toggle { display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 
             section { margin-bottom: 2.25rem; }
-            h2 { font-size: 1.1rem; }
+
+            h2 {
+                display: inline-block;
+                font-size: 0.9rem;
+                font-weight: 600;
+                letter-spacing: 0;
+                line-height: 1.3;
+                color: var(--bg);
+                background: var(--text);
+                padding: 0.28rem 0.65rem;
+                margin-bottom: 1rem;
+            }
 
             .empty-state { padding: 3rem 1.25rem; }
 
@@ -522,7 +540,7 @@
                     <div class="fun-icon">📷</div>
                     <div class="fun-body">
                         <h3>Behind the lens</h3>
-                        <p>I'm a photographer. I started out shooting portraits, then drifted toward natural landscapes, especially the cold, snowy kind. Top recommendation for shooting: Norway. Come find me for travel or photo-spot tips anytime.</p>
+                        <p>I'm a photographer. I started out shooting portraits, then drifted toward natural landscapes, especially the cold, snowy kind. Growing up in Guizhou, I'd only seen snow once before turning 18 (back in 2018), which probably explains the obsession. Top recommendation for shooting: Norway. Come find me for travel or photo-spot tips anytime.</p>
                     </div>
                 </div>
 
@@ -530,7 +548,7 @@
                     <div class="fun-icon">🔮</div>
                     <div class="fun-body">
                         <h3>Part-time mystic</h3>
-                        <p>Off the clock, this is the least empirical version of me: an enthusiastic amateur at MBTI, astrology, and Chinese fortune-telling. Strictly for fun, and I promise it stays well clear of my research.</p>
+                        <p>Off the clock, this is the least empirical version of me: an enthusiastic amateur at MBTI, astrology, and Chinese fortune-telling. I'm terrible at starting small talk, so these feel like a shortcut to get to know someone quickly, even though most of the time the reading is wildly unreliable. Strictly for fun, and I promise it stays well clear of my research.</p>
                     </div>
                 </div>
 
@@ -546,7 +564,7 @@
                     <div class="fun-icon">🧋</div>
                     <div class="fun-body">
                         <h3>Will do anything for bubble tea</h3>
-                        <p>Heavy bubble tea drinker. I've even done a stint behind the counter, purely for the joy of it. My favourite video game is Overcooked, and pulling bubble tea orders feels like the real-life version. When my brain is fried from research, that kind of cheerful, hands-on chaos is somehow my ideal reset.</p>
+                        <p>Heavy bubble tea drinker. I've even done a stint behind the counter, purely so I could drink it for free, otherwise you wouldn't believe how much I'd spend on it in a single day. My favourite video game is <a class="inline-link" href="https://store.steampowered.com/app/448510/Overcooked/" target="_blank" rel="noopener">Overcooked</a>, and pulling bubble tea orders feels like the real-life version. When my brain is fried from research, that kind of cheerful, hands-on chaos is somehow my ideal reset.</p>
                     </div>
                 </div>
 
