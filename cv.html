@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV · Weilin He</title>
+    <title>Fun Facts · Weilin He</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
@@ -266,6 +266,45 @@
 
         .empty-state .contact-hint a:hover { opacity: 0.7; }
 
+        /* Fun Facts */
+        .fun-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.75rem;
+        }
+
+        .fun-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.1rem;
+        }
+
+        .fun-icon {
+            font-size: 1.45rem;
+            line-height: 1.4;
+            flex-shrink: 0;
+            width: 2rem;
+            text-align: center;
+        }
+
+        .fun-body { flex: 1; min-width: 0; }
+
+        .fun-body h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: -0.005em;
+            color: var(--text);
+            margin-bottom: 0.3rem;
+        }
+
+        .fun-body p {
+            color: var(--text-secondary);
+            font-size: 0.93rem;
+            line-height: 1.7;
+        }
+
+        .fun-body p .accent { color: var(--accent); font-weight: 500; }
+
         footer {
             margin-top: 4.5rem;
             font-size: 0.78rem;
@@ -407,13 +446,13 @@
                 <a href="index.html">Home</a>
                 <a href="publications.html">Publications</a>
                 <a href="diary.html">Research Diary</a>
-                <a href="cv.html" class="active">CV</a>
+                <a href="cv.html" class="active">Fun Facts</a>
             </div>
             <div class="nav-links popup" id="navLinksPopup">
                 <a href="index.html">Home</a>
                 <a href="publications.html">Publications</a>
                 <a href="diary.html">Research Diary</a>
-                <a href="cv.html" class="active">CV</a>
+                <a href="cv.html" class="active">Fun Facts</a>
             </div>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
                 <span class="hamburger"><span></span><span></span><span></span></span>
@@ -451,19 +490,80 @@
         <main class="content">
 
         <section>
-            <h2>Curriculum Vitae</h2>
-            <p class="subtitle">Coming soon.</p>
+            <h2>Fun Facts</h2>
+            <p class="subtitle">A few things about me beyond research.</p>
 
-            <div class="empty-state">
-                <div class="empty-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+            <div class="fun-list">
+                <div class="fun-item">
+                    <div class="fun-icon">🌧️</div>
+                    <div class="fun-body">
+                        <h3>The story behind my name</h3>
+                        <p>My name is He Weilin (何委霖). The character 霖 is "rain" over "forest", water falling on the woods, a symbol of shelter and nourishment. Say "He Weilin" fast and it sounds like <em>hé wéi líng</em>, "sum equals zero", so people just call me <span class="accent">00</span>.</p>
+                    </div>
                 </div>
-                <h3>CV Currently Being Updated</h3>
-                <p>The full version of the Curriculum Vitae is currently being updated and is temporarily unavailable for download. Please check back later.</p>
-                <div class="divider"></div>
-                <div class="contact-hint">
-                    For urgent academic inquiries, please reach out via
-                    <a href="mailto:te23071@bristol.ac.uk">email</a>.
+
+                <div class="fun-item">
+                    <div class="fun-icon">👩‍💻</div>
+                    <div class="fun-body">
+                        <h3>Co-founder of RealizAI</h3>
+                        <p>I co-founded RealizAI, a Singapore-based paid AI community for women, focused on AI and vibe coding. The mission is simple: give women with zero AI background a space to ask anything without pressure, and actually get on board for the AI era.</p>
+                    </div>
+                </div>
+
+                <div class="fun-item">
+                    <div class="fun-icon">📈</div>
+                    <div class="fun-body">
+                        <h3>Ex content creator</h3>
+                        <p>My personal best as a creator was +10k followers in a single week. I've hung up the camera for now, but don't be surprised if I come back with a blog or an AI tutorial / knowledge-sharing channel.</p>
+                    </div>
+                </div>
+
+                <div class="fun-item">
+                    <div class="fun-icon">❄️</div>
+                    <div class="fun-body">
+                        <h3>Snow fanatic</h3>
+                        <p>I'm obsessed with cold, snowy places, because I'd only seen snow once before I turned 20. Top recommendation: Norway. Come find me for travel tips anytime.</p>
+                    </div>
+                </div>
+
+                <div class="fun-item">
+                    <div class="fun-icon">🔮</div>
+                    <div class="fun-body">
+                        <h3>Part-time mystic</h3>
+                        <p>Amateur fortune teller / MBTI / astrology enthusiast. I do Chinese fortune telling 🙂</p>
+                    </div>
+                </div>
+
+                <div class="fun-item">
+                    <div class="fun-icon">☕</div>
+                    <div class="fun-body">
+                        <h3>Caffeine-powered human</h3>
+                        <p>Serious coffee lover, so serious I went and learned to make it myself. Essentially, I'm a pour-over that learned to walk.</p>
+                    </div>
+                </div>
+
+                <div class="fun-item">
+                    <div class="fun-icon">🧋</div>
+                    <div class="fun-body">
+                        <h3>Will do anything for bubble tea</h3>
+                        <p>Heavy bubble tea drinker. My very first job had one pure motivation: employees got unlimited refills. The paycheck was a side quest. Free top-ups were the real KPI.</p>
+                    </div>
+                </div>
+
+                <div class="fun-item">
+                    <div class="fun-icon">🐱</div>
+                    <div class="fun-body">
+                        <h3>Cats &amp; dogs, my one true weakness</h3>
+                        <p>Completely defenseless against anything furry. Sincere request: please spam me with photos of your fur babies. Grids welcome, videos preferred, bring 'em all.</p>
+                    </div>
+                </div>
+
+                <div class="fun-item">
+                    <div class="fun-icon">🏊</div>
+                    <div class="fun-body">
+                        <h3>Pool regular</h3>
+                        <p>I love spending a whole day by the pool. One small detail. I can't swim.</p>
+                    </div>
                 </div>
             </div>
         </section>
