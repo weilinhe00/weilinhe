@@ -319,6 +319,18 @@
         }
         a.inline-link:hover { opacity: 0.7; }
 
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            margin-top: 3.5rem;
+            font-size: 0.9rem;
+            color: var(--accent);
+            text-decoration: none;
+            transition: opacity 0.15s ease;
+        }
+        .back-link:hover { opacity: 0.7; }
+
         footer {
             margin-top: 4.5rem;
             font-size: 0.78rem;
@@ -472,14 +484,12 @@
                 <a href="publications.html">Publications</a>
                 <a href="diary.html">Research Diary</a>
                 <a href="work.html">Past Projects</a>
-                <a href="funfacts.html" class="active">Fun Facts</a>
             </div>
             <div class="nav-links popup" id="navLinksPopup">
                 <a href="index.html">Home</a>
                 <a href="publications.html">Publications</a>
                 <a href="diary.html">Research Diary</a>
                 <a href="work.html">Past Projects</a>
-                <a href="funfacts.html" class="active">Fun Facts</a>
             </div>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
                 <span class="hamburger"><span></span><span></span><span></span></span>
@@ -610,6 +620,8 @@
                     </div>
                 </div>
             </div>
+
+            <a class="back-link" href="index.html#about">&larr; Back to About</a>
         </section>
 
         </main>
