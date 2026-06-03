@@ -544,6 +544,130 @@
             footer { margin-top: 4rem; }
         }
 
+        /* ===== Selected Work ===== */
+        .work-subhead {
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--text-tertiary);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin: 2.5rem 0 1.5rem;
+        }
+        .work-subhead:first-of-type { margin-top: 1.75rem; }
+
+        .diary-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        .diary-entry {
+            display: grid;
+            grid-template-columns: 110px 1fr;
+            gap: 1.75rem;
+        }
+
+        .diary-meta { padding-top: 0.15rem; }
+
+        .diary-date {
+            font-size: 0.82rem;
+            color: var(--text);
+            font-weight: 500;
+            font-variant-numeric: tabular-nums;
+            margin-bottom: 0.15rem;
+        }
+
+        .diary-loc {
+            font-size: 0.78rem;
+            color: var(--text-tertiary);
+        }
+
+        .diary-title {
+            font-weight: 600;
+            color: var(--text);
+            font-size: 1rem;
+            line-height: 1.4;
+            letter-spacing: -0.01em;
+            margin-bottom: 0.9rem;
+        }
+
+        .diary-body {
+            color: var(--text-secondary);
+            font-size: 0.92rem;
+            line-height: 1.7;
+        }
+        .diary-body p { margin-bottom: 0.85rem; color: var(--text-secondary); }
+        .diary-body p:last-child { margin-bottom: 0; }
+        .diary-body strong { color: var(--text); font-weight: 600; }
+
+        .work-links {
+            margin-top: 0.9rem;
+            font-size: 0.85rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem 0.9rem;
+        }
+        .work-links a {
+            color: var(--accent);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            transition: opacity 0.15s ease;
+        }
+        .work-links a:hover { opacity: 0.7; }
+        .work-links a svg { width: 13px; height: 13px; }
+
+        .link-card {
+            display: block;
+            margin-top: 1.25rem;
+            border: 1px solid var(--hairline);
+            border-radius: 14px;
+            background: var(--bg);
+            text-decoration: none;
+            color: var(--text);
+            overflow: hidden;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+        .link-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+            border-color: transparent;
+        }
+        .link-card .lc-image {
+            width: 100%;
+            height: 140px;
+            background-size: cover;
+            background-position: center;
+            background-color: #f5f5f7;
+        }
+        .link-card .lc-body { padding: 1rem 1.15rem 1.1rem; }
+        .link-card .lc-title {
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: -0.01em;
+            margin-bottom: 0.3rem;
+            color: var(--text);
+        }
+        .link-card .lc-desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.55;
+            margin-bottom: 0.55rem;
+        }
+        .link-card .lc-url {
+            font-size: 0.78rem;
+            color: var(--accent);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+        .link-card .lc-url svg { width: 12px; height: 12px; }
+
+        @media (max-width: 640px) {
+            .diary-entry { grid-template-columns: 1fr; gap: 0.4rem; }
+        }
+
         /* ===== Dark mode ===== */
         @media (prefers-color-scheme: dark) {
             :root {
@@ -558,6 +682,9 @@
                 background: #1c1c1e;
                 box-shadow: 0 10px 32px rgba(0,0,0,0.5);
             }
+            .link-card { border-color: #424245; background: #1c1c1e; }
+            .link-card:hover { box-shadow: 0 10px 28px rgba(0,0,0,0.5); }
+            .link-card .lc-image { background-color: #2c2c2e; }
             ::selection { background: #f5f5f7; color: #000; }
         }
     </style>
@@ -613,6 +740,7 @@
             <a href="#interests">Research Interests</a>
             <a href="#education">Education</a>
             <a href="#news">News</a>
+            <a href="#work">Selected Work</a>
         </div>
 
         </aside>
@@ -735,6 +863,130 @@
                         <p>Joined the <a class="inline-link" href="https://plrg-bristol.github.io/" target="_blank" rel="noopener">Programming Languages Research Group (PLRG), University of Bristol</a>.</p>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section id="work">
+            <h2>Selected Work</h2>
+            <p class="subtitle">My MSc dissertation, selected coursework, and undergraduate projects. Each project links to its own materials &mdash; code, video, or report, depending on what's available.</p>
+
+            <h3 class="work-subhead">MSc Data Science &middot; University of Bristol (2024&ndash;2025)</h3>
+            <div class="diary-list">
+
+                <div class="diary-entry">
+                    <div class="diary-meta">
+                        <div class="diary-date">EMATM0047</div>
+                        <div class="diary-loc">Dissertation</div>
+                    </div>
+                    <div>
+                        <div class="diary-title">Integrating Multi-Omics Datasets to Build a Regulatory Network and Identify Molecular Drivers of Micronutrient Deficiency in Pregnancy</div>
+                        <div class="diary-body">
+                            <p>My MSc dissertation (supervised by Daniel D'Andrea). I integrated multi-omics datasets to construct a regulatory network and benchmarked feature-selection strategies against several learning algorithms to identify candidate molecular drivers of micronutrient deficiency in pregnancy.</p>
+                        </div>
+                        <div class="work-links">
+                            <a href="https://github.com/weilinhe00/P056_Integrating_Msc" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.67 5.56.67 11.83c0 5.02 3.25 9.27 7.75 10.77.57.1.78-.24.78-.55 0-.27-.01-.99-.02-1.94-3.15.68-3.82-1.52-3.82-1.52-.51-1.31-1.26-1.66-1.26-1.66-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.74 2.66 1.23 3.31.94.1-.73.4-1.23.72-1.51-2.51-.29-5.16-1.26-5.16-5.58 0-1.23.44-2.24 1.16-3.03-.12-.29-.5-1.44.11-3 0 0 .95-.3 3.11 1.16.9-.25 1.87-.38 2.83-.38.96 0 1.93.13 2.83.38 2.16-1.46 3.11-1.16 3.11-1.16.61 1.56.23 2.71.11 3 .72.79 1.16 1.8 1.16 3.03 0 4.33-2.66 5.29-5.18 5.57.41.35.77 1.05.77 2.11 0 1.52-.01 2.75-.01 3.13 0 .31.2.66.79.55 4.5-1.5 7.74-5.75 7.74-10.77C23.33 5.56 18.27.5 12 .5z"/></svg>Code (GitHub)</a>
+                            <a href="resources/masters/thesis.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Thesis (PDF)</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="diary-entry">
+                    <div class="diary-meta">
+                        <div class="diary-date">EMATM0050</div>
+                        <div class="diary-loc">Mini-Project &middot; Group 28</div>
+                    </div>
+                    <div>
+                        <div class="diary-title">Prediction of Non-Coding RNAs' Role in Cancer Through Multi-Omics Data Integration</div>
+                        <div class="diary-body">
+                            <p>A group project investigating the regulatory mechanism of lncRNA MIR100HG in cancer by integrating gene expression, DNA methylation, and transcription factor&ndash;target gene data into a reproducible multi-stage pipeline.</p>
+                        </div>
+                        <div class="work-links">
+                            <a href="resources/masters/mini-project-report.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Group report (PDF)</a>
+                            <a href="resources/masters/mini-project-contribution.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Contribution (PDF)</a>
+                            <a href="resources/masters/mini-project-slides.pptx" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Slides (PPTX)</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="diary-entry">
+                    <div class="diary-meta">
+                        <div class="diary-date">EMATM0066</div>
+                        <div class="diary-loc">Visual Analytics</div>
+                    </div>
+                    <div>
+                        <div class="diary-title">Visualising Housing Inequality: A Multi-Modal Dashboard for Structural Evolution and Affordability Prediction in England and Wales</div>
+                        <div class="diary-body">
+                            <p>An interactive Tableau dashboard integrating six 2011 Census housing tables with house-price and income data. I applied PCA and UMAP for dimensionality reduction to analyse the structural evolution of housing tenure and spatial disparities in affordability.</p>
+                        </div>
+                        <div class="work-links">
+                            <a href="resources/masters/visual-analytics-report.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Report (PDF)</a>
+                            <a href="resources/masters/visual-analytics-dashboard.twbx" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Dashboard (Tableau)</a>
+                            <a href="https://drive.google.com/file/d/11NanlwxjPR3PAdUCNWU2W1k59tdWfbls/view?usp=share_link" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>Demo video</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="diary-entry">
+                    <div class="diary-meta">
+                        <div class="diary-date">EMATM0067</div>
+                        <div class="diary-loc">AI &amp; Text Analytics</div>
+                    </div>
+                    <div>
+                        <div class="diary-title">Semantic Clustering and Classification in Text Analysis</div>
+                        <div class="diary-body">
+                            <p>Constructed context-based word representations to study semantic proximity between content words in English novels, comparing KMeans, Agglomerative Clustering, and DBSCAN alongside graph analysis to uncover latent semantic structures.</p>
+                        </div>
+                        <div class="work-links">
+                            <a href="resources/masters/text-analytics-clustering.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Report (PDF)</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="diary-entry">
+                    <div class="diary-meta">
+                        <div class="diary-date">EMATM0067</div>
+                        <div class="diary-loc">AI &amp; Text Analytics</div>
+                    </div>
+                    <div>
+                        <div class="diary-title">A Comparative Analysis of Machine Learning Methods for Sentiment Classification and Topic Modeling in Climate Change Discourse</div>
+                        <div class="diary-body">
+                            <p>Enhanced a baseline Naive Bayes classifier and compared three models for sentiment classification, then applied topic modeling to climate-change discourse, analysing misclassified examples to surface model strengths and limitations.</p>
+                        </div>
+                        <div class="work-links">
+                            <a href="resources/masters/text-analytics-sentiment.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Report (PDF)</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <h3 class="work-subhead">Undergraduate &middot; Tianjin University</h3>
+            <div class="diary-list">
+
+                <div class="diary-entry">
+                    <div class="diary-meta">
+                        <div class="diary-date">2024</div>
+                        <div class="diary-loc">Tianjin, China</div>
+                    </div>
+                    <div>
+                        <div class="diary-title">Interview ACE &mdash; AI-Powered Interview Coaching</div>
+                        <div class="diary-body">
+                            <p>An AI-powered career companion that takes you from a polished resume to a confident offer: AI resume feedback, AI mock interviewers with switchable personas, 1-on-1 rehearsals with real HR pros, and a learning community. Built with a team of four as our Information Systems Analysis &amp; Design course project.</p>
+                        </div>
+                        <a href="https://weilinhe00.github.io/interview-ace-site/" target="_blank" rel="noopener" class="link-card">
+                            <div class="lc-image" style="background-image: url('https://weilinhe00.github.io/interview-ace-site/assets/ui/cover.png');"></div>
+                            <div class="lc-body">
+                                <div class="lc-title">Interview ACE</div>
+                                <div class="lc-desc">Where intelligence meets conversation. Where interviews meet the future.</div>
+                                <div class="lc-url">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                                    weilinhe00.github.io/interview-ace-site
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </section>
 
