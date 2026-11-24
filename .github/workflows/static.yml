@@ -38,6 +38,9 @@ jobs:
         with:
           # Upload entire repository
           path: '.'
+      # Allow the uploaded artifact to become visible to the Pages deployment API.
+      - name: Wait for artifact availability
+        run: sleep 20
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
